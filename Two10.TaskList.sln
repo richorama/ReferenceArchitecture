@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Two10.TaskList.Web", "Two10.TaskList.Web\Two10.TaskList.Web.csproj", "{5CE77795-2C7A-401B-9862-FDF2E8D4D97B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Two10.TaskList.Resources", "Two10.TaskList.Resources\Two10.TaskList.Resources.csproj", "{36008D50-115B-430F-B5D6-63D1D11A5123}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CE77795-2C7A-401B-9862-FDF2E8D4D97B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CE77795-2C7A-401B-9862-FDF2E8D4D97B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CE77795-2C7A-401B-9862-FDF2E8D4D97B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CE77795-2C7A-401B-9862-FDF2E8D4D97B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36008D50-115B-430F-B5D6-63D1D11A5123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36008D50-115B-430F-B5D6-63D1D11A5123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36008D50-115B-430F-B5D6-63D1D11A5123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36008D50-115B-430F-B5D6-63D1D11A5123}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
