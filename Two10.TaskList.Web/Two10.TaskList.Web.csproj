@@ -34,8 +34,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.0.0\lib\net40-client\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.4.3.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.0.10827.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.2.2.1.4\lib\net40-Full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc">
+      <HintPath>..\packages\NinjectMvc\Ninject.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.0.12051\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -62,11 +78,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="AutoMapperConfiguration.cs" />
+    <Compile Include="BaseController.cs" />
+    <Compile Include="ControllerInjectionModule.cs" />
     <Compile Include="Controllers\StyleController.cs" />
+    <Compile Include="Controllers\TaskController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\TaskItemViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -133,7 +153,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Content Include="Views\Shared\Edit.cshtml" />
+    <Content Include="Views\Shared\List.cshtml" />
+    <Content Include="Views\Shared\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -142,9 +164,17 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Two10.TaskList.Model\Two10.TaskList.Model.csproj">
+      <Project>{D1C454D2-68FC-45B6-AB7C-21A019DD7F11}</Project>
+      <Name>Two10.TaskList.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Two10.TaskList.Resources\Two10.TaskList.Resources.csproj">
       <Project>{36008D50-115B-430F-B5D6-63D1D11A5123}</Project>
       <Name>Two10.TaskList.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Two10.TaskList.Services\Two10.TaskList.Services.csproj">
+      <Project>{1937A8AE-DDC1-4485-8BE6-D7113131D707}</Project>
+      <Name>Two10.TaskList.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

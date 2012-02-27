@@ -1,0 +1,9 @@
+﻿
+@using (Html.BeginForm())
+{ 
+    <div class="input-form">
+        @Html.EditorForModel(Model as object)
+    </div>
+    <br /><br />
+    <input type="submit" class="btn btn-primary" value="Submit" /> <span> <a href="javascript:history.go(-1)" class="btn">Cancel</a></span>
+}

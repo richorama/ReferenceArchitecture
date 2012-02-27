@@ -14,10 +14,10 @@
     <!-- Le styles -->
     <style>
       body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
-   
+    
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -49,12 +49,17 @@
       </div>
     </div>
 
+
+
     <div class="container">
-
-      <h1>@ViewBag.Title<sub>@ViewBag.SubTitle</sub></h1>
+        <div style="background:whitesmoke; padding:20px; margin-bottom:20px;">
+            <h1>@ViewBag.Title <small> @ViewBag.SubTitle</small></h1>
+        </div>
       @RenderBody()
+      
     </div>
-
+    
+    
 
   </body>
 </html>
