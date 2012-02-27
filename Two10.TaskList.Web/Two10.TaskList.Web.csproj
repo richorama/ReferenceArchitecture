@@ -80,7 +80,6 @@
   <ItemGroup>
     <Compile Include="AutoMapperConfiguration.cs" />
     <Compile Include="BaseController.cs" />
-    <Compile Include="ControllerInjectionModule.cs" />
     <Compile Include="Controllers\StyleController.cs" />
     <Compile Include="Controllers\TaskController.cs" />
     <Compile Include="Global.asax.cs">
