@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Two10.TaskList.Services", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Two10.TaskList.Tests", "Two10.TaskList.Tests\Two10.TaskList.Tests.csproj", "{F05F618C-2B00-4B8E-AB3B-F316670C1ED8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Two10.RestClient", "Two10.RestClient\Two10.RestClient.csproj", "{B2EFACDF-7CC6-4C9E-AE7C-CF8C748938F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{F05F618C-2B00-4B8E-AB3B-F316670C1ED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F05F618C-2B00-4B8E-AB3B-F316670C1ED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F05F618C-2B00-4B8E-AB3B-F316670C1ED8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2EFACDF-7CC6-4C9E-AE7C-CF8C748938F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2EFACDF-7CC6-4C9E-AE7C-CF8C748938F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2EFACDF-7CC6-4C9E-AE7C-CF8C748938F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2EFACDF-7CC6-4C9E-AE7C-CF8C748938F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

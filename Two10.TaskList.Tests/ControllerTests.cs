@@ -23,7 +23,7 @@ namespace Two10.TaskList.Tests
         public void Test_TaskController()
         {
             var taskService = new Moq.Mock<ITaskService>();
-            taskService.Setup<IEnumerable<TaskItem>>(x => x.Tasks()).Returns(new List<TaskItem> { new TaskItem() { Name = "New Task" } });
+            taskService.Setup<IEnumerable<TaskItem>>(x => x.AllTasks()).Returns(new List<TaskItem> { new TaskItem() { Name = "New Task" } });
 
             var taskController = new TaskController(taskService.Object);
             var result = taskController.Index();
@@ -73,6 +73,22 @@ namespace Two10.TaskList.Tests
             var model3 = (result3 as ViewResult).Model as TaskItemViewModel;
             Assert.AreEqual(1, model.Id);
             Assert.AreEqual("Altered Task", model.Name);
+
+        }
+
+        [Test]
+        public void Test_TaskController_Complete()
+        {
+            var taskService = new Moq.Mock<ITaskService>();
+            var item = new TaskItem() { Id = 1, Name = "Test Task", Complete = false };
+            taskService.Setup<TaskItem>(x => x.Get(1)).Returns(item);
+
+            var taskController = new TaskController(taskService.Object);
+
+            Assert.IsFalse(item.Complete);
+            var result = taskController.Complete(1);
+            Assert.IsTrue(item.Complete);
+            Assert.IsNotNull(result as RedirectToRouteResult);
 
         }
 

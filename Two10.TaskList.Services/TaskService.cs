@@ -50,7 +50,7 @@ namespace Two10.TaskList.Services
             this.Database.SaveChanges();
         }
 
-        public IEnumerable<TaskItem> Tasks()
+        public IEnumerable<TaskItem> AllTasks()
         {
             return this.UserTasks;
         }

@@ -27,7 +27,7 @@ namespace Two10.TaskList.Web.Controllers
             this.ViewBag.SubTitle = "All tasks";
             using (this.TaskService)
             {
-                var model = this.TaskService.Tasks().Select(x => Mapper.Map<TaskItemViewModel>(x));
+                var model = this.TaskService.AllTasks().Where(t => !t.Complete).Select(x => Mapper.Map<TaskItemViewModel>(x));
                 return View("List", model.ToArray());
             }
         }
@@ -82,6 +82,17 @@ namespace Two10.TaskList.Web.Controllers
 
             return RedirectToAction("Index");
 
+        }
+
+        public ActionResult Complete(int id)
+        {
+            using (this.TaskService)
+            {
+                var model = this.TaskService.Get(id);
+                model.Complete = true;
+                this.TaskService.Save(model);
+                return RedirectToAction("Index");
+            }
         }
 
 

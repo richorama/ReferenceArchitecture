@@ -1,0 +1,16 @@
+﻿
+@using (Html.BeginForm())
+{ 
+    <div class="input-form">
+        @Html.EditorForModel(Model as object)
+    </div>
+    <br /><br />
+    if (Model.Id == 0)
+    {
+        <input type="submit" class="btn btn-primary" value="Create" /> <a href="/Task" class="btn">Cancel</a>
+    }
+    else
+    { 
+        <input type="submit" class="btn btn-primary" value="Update" /> <a href="/Task/Complete/@Model.Id" class="btn btn-danger">Complete</a> <a href="/Task" class="btn">Cancel</a>
+    }
+}

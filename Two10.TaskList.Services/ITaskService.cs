@@ -10,6 +10,6 @@ namespace Two10.TaskList.Services
 
         void Save(TaskItem newTask);
 
-        IEnumerable<TaskItem> Tasks();
+        IEnumerable<TaskItem> AllTasks();
     }
 }

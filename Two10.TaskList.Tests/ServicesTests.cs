@@ -42,7 +42,7 @@ namespace Two10.TaskList.Tests
                 Assert.IsNotNull(task2);
                 Assert.AreEqual(task, task2);
                 Assert.AreEqual(user, task.User, "The service should associate the task with the user");
-                Assert.AreEqual(1, taskService.Tasks().Count());
+                Assert.AreEqual(1, taskService.AllTasks().Count());
             }
         }
 

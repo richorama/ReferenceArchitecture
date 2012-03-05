@@ -80,7 +80,6 @@
   <ItemGroup>
     <Compile Include="AutoMapperConfiguration.cs" />
     <Compile Include="BaseController.cs" />
-    <Compile Include="Controllers\StyleController.cs" />
     <Compile Include="Controllers\TaskController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -152,15 +151,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\Edit.cshtml" />
-    <Content Include="Views\Shared\List.cshtml" />
+    <Content Include="Views\Task\Edit.cshtml" />
+    <Content Include="Views\Task\List.cshtml" />
     <Content Include="Views\Shared\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Two10.TaskList.Model\Two10.TaskList.Model.csproj">
