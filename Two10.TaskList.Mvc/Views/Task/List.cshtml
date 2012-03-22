@@ -1,0 +1,22 @@
+﻿@{
+    string controller = this.ViewContext.Controller.GetType().Name.Replace("Controller", "");
+<ul>
+
+    @{
+    bool containsData = false;
+    foreach (dynamic item in Model)
+    {
+        containsData = true;
+        <li>
+            @System.Web.Mvc.Html.LinkExtensions.ActionLink(Html, string.IsNullOrWhiteSpace(item.ToString()) ? "Blank " + item.GetType().Name : item.ToString(), "Edit", controller, new { id = item.Id }, new { })
+        </li>
+    }
+
+    if (!containsData)
+    { 
+        <span>None</span>
+    }
+    }
+</ul>
+<a href="/@controller/Create" class="btn">+ Add a new task</a>
+}

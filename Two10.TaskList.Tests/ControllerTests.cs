@@ -4,9 +4,9 @@ using System.Web.Mvc;
 using NUnit.Framework;
 using Two10.TaskList.Model;
 using Two10.TaskList.Services;
-using Two10.TaskList.Web;
-using Two10.TaskList.Web.Controllers;
-using Two10.TaskList.Web.Models;
+using Two10.TaskList.Mvc;
+using Two10.TaskList.Mvc.Controllers;
+using Two10.TaskList.Mvc.Models;
 
 namespace Two10.TaskList.Tests
 {
